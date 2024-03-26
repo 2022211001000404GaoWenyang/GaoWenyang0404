@@ -28,7 +28,6 @@
           Gender <input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female<br><br>
           Date of birth:<input type="text" name="birth" placeholder="Date of Birth(yyyy-mm-dd)"><br><br>
           <input type="submit" value="Register"/>
-
       </form>
   </div>
 </body>

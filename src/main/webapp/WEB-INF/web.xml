@@ -10,9 +10,31 @@
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.GaoWenyang.week3.RegisterServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
-
-
+    <servlet>
+        <servlet-name>JDBCDemoServlet</servlet-name>
+        <servlet-class>com.GaoWenyang.week4.JDBCDemoServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <!-- load and call init()when tomcat start -->
+    </servlet>
+    <servlet>
+        <servlet-name>ContextConfigServlet</servlet-name>
+        <servlet-class>com.GaoWenyang.week4.ContextConfigServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <servlet-class>com.GaoWenyang.week4.ConfigDemoServlet</servlet-class>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>GaoWenyang</param-value>
+        </init-param>
+        <init-param>
+            <param-name>studentID</param-name>
+            <param-value>2022211001000404</param-value>
+        </init-param>
+    </servlet>
     <servlet-mapping>
         <servlet-name>demo</servlet-name>
         <url-pattern>/hello</url-pattern>
@@ -21,4 +43,43 @@
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JDBCDemoServlet</servlet-name>
+        <url-pattern>/jdbc</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContextConfigServlet</servlet-name>
+        <url-pattern>/context</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+  <!--在web.xml中配置config <servlet>
+       <servlet-name></servlet-name>
+       <servlet-class></servlet-class>
+       <load-on-startup>1</load-on-startup>
+       <init-param>
+           <param-name></param-name>
+           <param-value></param-value>
+       </init-param>
+   </servlet>-->
+<!--    within web-app,for all servlet and jsp in this project -->
+<!--    change database to mysql-->
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/userdb?useUnicode=true&amp;characterEncoding=utf-8</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>123456</param-value>
+    </context-param>
 </web-app>
