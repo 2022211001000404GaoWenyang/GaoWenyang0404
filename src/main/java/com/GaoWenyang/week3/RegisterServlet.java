@@ -13,9 +13,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.concurrent.atomic.AtomicReference;
 
-@WebServlet(
+/*@WebServlet(
         name = "RegisterServlet",urlPatterns = {"/register"}
-)
+)*/
 public class RegisterServlet extends HttpServlet {
     Connection con=null;
     ServletContext context=null;
