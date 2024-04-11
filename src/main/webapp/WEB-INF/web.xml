@@ -12,7 +12,6 @@
         <servlet-class>com.GaoWenyang.week3.RegisterServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>-->
-
     <servlet>
         <servlet-name>JDBCDemoServlet</servlet-name>
         <servlet-class>com.GaoWenyang.week4.JDBCDemoServlet</servlet-class>
@@ -40,6 +39,10 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.GaoWenyang.week5.demo.LoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RedirectServlet</servlet-name>
+        <servlet-class>com.GaoWenyang.week6.RedirectServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>demo</servlet-name>
         <url-pattern>/hello</url-pattern>
@@ -61,6 +64,7 @@
         <servlet-name>ConfigDemoServlet</servlet-name>
         <url-pattern>/config</url-pattern>
     </servlet-mapping>
+
   <!--在web.xml中配置config <servlet>
        <servlet-name></servlet-name>
        <servlet-class></servlet-class>
