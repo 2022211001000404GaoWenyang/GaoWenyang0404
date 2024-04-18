@@ -61,8 +61,8 @@ public class RegisterServlet extends HttpServlet {
             if(rows>0){
                 System.out.println("成功添加了 "+rows+"条数据");
             }
-             sql="select id,username,password,email,gender,birthdate from usertable";
-            ResultSet rs=ps.executeQuery(sql);
+             /*sql="select id,username,password,email,gender,birthdate from usertable";
+            ResultSet rs=ps.executeQuery(sql);*/
             // 构建html表格
             //here is html code --move these html code in a jsp page -userList.jsp
             /*out.println("<html><title></title><body><table border='1'>");
@@ -85,10 +85,10 @@ public class RegisterServlet extends HttpServlet {
              //no more here
             System.out.println("I am in RegisterServlet -->doPost() -->after forward()");//no see this line*/
             response.sendRedirect("login.jsp");
-            out.close();
+            /*out.close();
             rs.close();
             ps.close();
-            con.close();
+            con.close();*/
 
 
         } catch (SQLException e) {

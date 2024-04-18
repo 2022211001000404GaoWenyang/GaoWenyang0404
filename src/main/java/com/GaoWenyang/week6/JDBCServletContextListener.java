@@ -26,7 +26,7 @@ public class JDBCServletContextListener implements ServletContextListener {
             Class.forName(driver);
            Connection con = DriverManager.getConnection(url, username, password);
             System.out.println("i am in contextInitialized()"+con);//when?
-            //System.out.println("mysql连接成功" + con);
+            System.out.println("mysql连接成功" + con);
             //set Connection as a context attribute --for all jsp
             context.setAttribute("con",con);
 

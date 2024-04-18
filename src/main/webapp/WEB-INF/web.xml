@@ -37,7 +37,7 @@
     </servlet>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>com.GaoWenyang.week5.demo.LoginServlet</servlet-class>
+        <servlet-class>com.GaoWenyang.week5.LoginServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>RedirectServlet</servlet-name>
@@ -92,4 +92,7 @@
         <param-name>password</param-name>
         <param-value>123456</param-value>
     </context-param>
+    <welcome-file-list>
+        <welcome-file>home</welcome-file><!-- when you run app-first request send to home-HomeServlet -->
+    </welcome-file-list>
 </web-app>
