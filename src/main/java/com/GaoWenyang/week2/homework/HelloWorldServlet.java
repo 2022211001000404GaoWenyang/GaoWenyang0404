@@ -13,6 +13,7 @@ public class HelloWorldServlet extends HttpServlet {
           writer.println("Name:Gao Wenyang");
           writer.println("ID:2022211001000404");
           writer.println("Date and Time: Tue Mar 12 13:20:45 CST 2024");
+        System.out.println("i am in HelloWorldServlet-doGet()");
 
         }
     }

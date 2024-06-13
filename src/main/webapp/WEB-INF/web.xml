@@ -7,11 +7,6 @@
         <servlet-name>demo</servlet-name>
         <servlet-class>com.GaoWenyang.week2.homework.HelloWorldServlet</servlet-class>
     </servlet>
-    <!--<servlet>
-        <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>com.GaoWenyang.week3.RegisterServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>-->
     <servlet>
         <servlet-name>JDBCDemoServlet</servlet-name>
         <servlet-class>com.GaoWenyang.week4.JDBCDemoServlet</servlet-class>
@@ -35,14 +30,8 @@
             <param-value>2022211001000404</param-value>
         </init-param>
     </servlet>
-    <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>com.GaoWenyang.week5.LoginServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>RedirectServlet</servlet-name>
-        <servlet-class>com.GaoWenyang.week6.RedirectServlet</servlet-class>
-    </servlet>
+
+
     <servlet-mapping>
         <servlet-name>demo</servlet-name>
         <url-pattern>/hello</url-pattern>
@@ -64,6 +53,30 @@
         <servlet-name>ConfigDemoServlet</servlet-name>
         <url-pattern>/config</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>com.GaoWenyang.filter.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/hello</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>HelloFilter</filter-name>
+        <filter-class>com.GaoWenyang.filter.HelloFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HelloFilter</filter-name>
+        <url-pattern>/hello</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>LoggerFilter</filter-name>
+        <filter-class>com.GaoWenyang.filter.LoggerFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoggerFilter</filter-name>
+        <url-pattern>/hello</url-pattern>
+    </filter-mapping>
 
   <!--在web.xml中配置config <servlet>
        <servlet-name></servlet-name>
@@ -78,7 +91,7 @@
 <!--    change database to mysql-->
     <context-param>
         <param-name>driver</param-name>
-        <param-value>com.mysql.jdbc.Driver</param-value>
+       <param-value>com.mysql.cj.jdbc.Driver</param-value>
     </context-param>
     <context-param>
         <param-name>url</param-name>

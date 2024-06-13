@@ -9,8 +9,5 @@
         <module name="_2022211001000404GaoWenyang" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="2022211001000404GaoWenyang" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
